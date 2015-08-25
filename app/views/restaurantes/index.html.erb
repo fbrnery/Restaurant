@@ -15,6 +15,7 @@
   <tbody>
     <% @restaurantes.each do |restaurante| %>
       <tr>
+        <td><%= restaurante.id %></td>
         <td><%= restaurante.name %></td>
         <td><%= restaurante.endereco %></td>
         <td><%= restaurante.especialidade %></td>
