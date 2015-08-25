@@ -7,8 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  </BR>
+  <div class="container">
+    <ul class="nav nav-pills">
+      <li role="presentation" class="active"><a href="#">Home</a></li>
+      <li role="presentation"><a href="#">Restaurantes</a></li>
+      <li role="presentation"><a href="#">Clientes</a></li>
+    </ul>
+  <%= yield %>
 
-<%= yield %>
-
+  </div>
 </body>
 </html>
