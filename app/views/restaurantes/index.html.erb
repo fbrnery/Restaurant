@@ -2,9 +2,10 @@
 
 <h1>Listing Restaurantes</h1>
 
-<table>
+<table class="table table-striped table-hover">
   <thead>
     <tr>
+      <th>ID</th>
       <th>Name</th>
       <th>Endereco</th>
       <th>Especialidade</th>
@@ -21,7 +22,11 @@
         <td><%= restaurante.especialidade %></td>
         <td><%= link_to 'Show', restaurante %></td>
         <td><%= link_to 'Edit', edit_restaurante_path(restaurante) %></td>
-        <td><%= link_to 'Destroy', restaurante, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+         <%= button_to restaurante, method: :delete, class: "btn btn-xs btn-danger" do %>
+              <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+            <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>
@@ -29,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New Restaurante', new_restaurante_path %>
+<%= link_to 'New Restaurante', new_restaurante_path, class:"btn btn-primary" %>

@@ -8,14 +8,28 @@
 </head>
 <body>
   </BR>
-  <div class="container">
-    <ul class="nav nav-pills">
-      <li role="presentation" class="active"><a href="#">Home</a></li>
-      <li role="presentation"><a href="#">Restaurantes</a></li>
-      <li role="presentation"><a href="#">Clientes</a></li>
-    </ul>
-  <%= yield %>
 
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <h1>Sistema de Qualificação de Restaurantes !!!</h1>
+    </div>
   </div>
+</nav>
+
+</BR>
+    <div class="container">
+
+      <%= link_to "Home", home_index_path, class:"btn btn-primary" %>
+
+      <%= link_to "Restaurantes", restaurantes_path, class:"btn btn-success" %>
+
+      <%= link_to "Clientes", clientes_path, class:"btn btn-info" %>
+
+      <%= yield %>
+    </div>
+ <footer>
+ </footer>
+
 </body>
 </html>
